@@ -1,0 +1,24 @@
+<div id="default">
+    <div class="containerWelcome">
+    
+<div layout="row" layout-xs="column">
+<div class="flex" ng-repeat="listing in listings">
+    <md-card>
+ <img src="{{'img/' + listing.picture }}" class="md-card-image category-picture" alt="image caption">
+ <md-card-content>
+   <h2>{{listing.name}}</h2>
+   <p>Card content</p>
+ </md-card-content>
+ <md-card-footer>
+   <a href="#/listing/{{listing.id}}">View</a>
+ </md-card-footer>
+</md-card>  
+</div> 
+  
+  
+
+
+ 
+    </div>
+</div>
+    

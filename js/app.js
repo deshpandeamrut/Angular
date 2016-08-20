@@ -1,4 +1,4 @@
-var app = angular.module('myAngularApp', ['ngRoute', 'ngAnimate', 'ngAria', 'ngMaterial']);
+var app = angular.module('myAngularApp', ['ngRoute', 'ngAnimate', 'ngAria', 'ngMaterial','firebase']);
 app.config(['$routeProvider',
     function ($routeProvider) {
         $routeProvider.
@@ -6,33 +6,13 @@ app.config(['$routeProvider',
                     templateUrl: 'default.html',
                     controller: 'defaultController'
                 }).
-                when('/item1', {
-                    templateUrl: 'item1.html',
-                    controller: 'item1Controller'
+                when('/categories',{
+                   templateUrl: 'categories.html',
+                    controller: 'categoriesController' 
                 }).
-                when('/item2', {
-                    templateUrl: 'item2.html',
-                    controller: 'item2Controller'
-                }).
-                when('/item3', {
-                    templateUrl: 'item3.html',
-                    controller: 'item3Controller'
-                }).
-                when('/item4', {
-                    templateUrl: 'item4.html',
-                    controller: 'item4Controller'
-                }).
-                when('/feed', {
-                    templateUrl: 'feed.html',
-                    controller: 'feedController'
-                }).
-                when('/post/:id?', {
-                    templateUrl: 'post.html',
-                    controller: 'postController'
-                }).
-                when('/todo', {
-                    templateUrl: 'todo.html',
-                    controller: 'todoController'
+                 when('/categories/:id?', {
+                    templateUrl: 'category.html',
+                    controller: 'categoryController'
                 }).
                 otherwise({
                     redirectTo: '/default'
