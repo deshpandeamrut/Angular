@@ -6,8 +6,11 @@
     <md-card>
  <img src="{{'img/' + listing.picture }}" class="md-card-image category-picture" alt="image caption">
  <md-card-content>
-   <h2>{{listing.name}}</h2>
-   <p>Card content</p>
+   <h2>{{listing.listing_name}}</h2>
+   <p>{{listing.owner_name}}</p>
+   <p>{{listing.contact_no1}}</p>
+   <p>{{listing.contact_no2}}</p>
+   <p>{{listing.email}}</p>
  </md-card-content>
  <md-card-footer>
    <a href="#/listing/{{listing.id}}">View</a>

@@ -1,4 +1,4 @@
-var app = angular.module('myAngularApp', ['ngRoute', 'ngAnimate', 'ngAria', 'ngMaterial','firebase']);
+var app = angular.module('myAngularApp', ['ngRoute', 'ngAnimate', 'ngAria', 'ngMaterial']);
 app.config(['$routeProvider',
     function ($routeProvider) {
         $routeProvider.
@@ -10,7 +10,7 @@ app.config(['$routeProvider',
                    templateUrl: 'categories.html',
                     controller: 'categoriesController' 
                 }).
-                 when('/categories/:id?', {
+                 when('/category/:categoryid?', {
                     templateUrl: 'category.html',
                     controller: 'categoryController'
                 }).
